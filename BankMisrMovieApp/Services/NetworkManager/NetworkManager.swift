@@ -6,24 +6,29 @@
 //
 
 import Foundation
+import UIKit
 
 enum NetworkError: Error {
     case invalidURL
 }
 
 protocol NetworkManagerProtocol {
-    func getMovies<T: Codable> (path: String, model: T.Type, handler: @escaping (T?, Error?) -> Void)
+    func getMovies<T: Codable> (pageNumber: Int, path: String, model: T.Type, handler: @escaping (T?, Error?) -> Void)
 }
 
 class NetworkManager : NetworkManagerProtocol {
-    private let apiKey = "api_key=4bc428766cc04018cb0b4cd2755baa97"
-    private let baseUrl = "https://api.themoviedb.org/3/discover/movie?"
+    private let baseUrl = "https://api.themoviedb.org/3/movie/"
     
-    func getMovies<T: Codable> (path: String, model: T.Type, handler: @escaping (T?, Error?) -> Void) {
-        guard let url = URL(string: "\(baseUrl)\(apiKey)\(path)") else {
+    func getMovies<T: Codable> (pageNumber: Int, path: String, model: T.Type, handler: @escaping (T?, Error?) -> Void) {
+        guard var url = URL(string: "\(baseUrl)\(path)") else {
             handler(nil, NetworkError.invalidURL)
             return
         }
+        let urlQuaryItem1 = URLQueryItem(name: "api_key", value: "4bc428766cc04018cb0b4cd2755baa97")
+        let urlQuaryItem2 = URLQueryItem(name: "page", value: "\(pageNumber)")
+        
+        url.append(queryItems: [urlQuaryItem1,urlQuaryItem2])
+        print(url)
                 
         URLSession.shared.dataTask(with: url) { data, response, error in
             do{
@@ -36,4 +41,6 @@ class NetworkManager : NetworkManagerProtocol {
             }
         }.resume()
     }
+    
+
 }

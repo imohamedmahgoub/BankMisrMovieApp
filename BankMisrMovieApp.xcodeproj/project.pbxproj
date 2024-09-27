@@ -19,12 +19,16 @@
 		0533AAC52CA633A7004E00A3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533AAC42CA633A7004E00A3 /* TabBarViewController.swift */; };
 		0533AACB2CA63410004E00A3 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533AAC92CA63410004E00A3 /* NowPlayingViewController.swift */; };
 		0533AACC2CA63410004E00A3 /* NowPlayingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0533AACA2CA63410004E00A3 /* NowPlayingViewController.xib */; };
-		0533AACF2CA63467004E00A3 /* NowPlayingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533AACD2CA63467004E00A3 /* NowPlayingTableViewCell.swift */; };
-		0533AAD02CA63467004E00A3 /* NowPlayingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0533AACE2CA63467004E00A3 /* NowPlayingTableViewCell.xib */; };
 		0533AAD62CA6356C004E00A3 /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533AAD42CA6356C004E00A3 /* UpcomingViewController.swift */; };
 		0533AAD72CA6356C004E00A3 /* UpcomingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0533AAD52CA6356C004E00A3 /* UpcomingViewController.xib */; };
 		0533AADD2CA635E6004E00A3 /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533AADB2CA635E5004E00A3 /* PopularViewController.swift */; };
 		0533AADE2CA635E6004E00A3 /* PopularViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0533AADC2CA635E5004E00A3 /* PopularViewController.xib */; };
+		0533AAEB2CA6DF06004E00A3 /* NowPlayingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0533AAEA2CA6DF06004E00A3 /* NowPlayingCollectionViewCell.xib */; };
+		0533AAEC2CA6DF06004E00A3 /* NowPlayingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533AAE92CA6DF06004E00A3 /* NowPlayingCollectionViewCell.swift */; };
+		0533AAEF2CA6E6E6004E00A3 /* upcomingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533AAEE2CA6E6E6004E00A3 /* upcomingViewModel.swift */; };
+		0533AAF22CA6E71B004E00A3 /* MoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533AAF12CA6E71B004E00A3 /* MoviesResponse.swift */; };
+		0533AAF52CA6E74D004E00A3 /* NowPlayingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533AAF42CA6E74D004E00A3 /* NowPlayingViewModel.swift */; };
+		0533AAF92CA6E78B004E00A3 /* PopularViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533AAF82CA6E78B004E00A3 /* PopularViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,12 +65,16 @@
 		0533AAC42CA633A7004E00A3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		0533AAC92CA63410004E00A3 /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 		0533AACA2CA63410004E00A3 /* NowPlayingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NowPlayingViewController.xib; sourceTree = "<group>"; };
-		0533AACD2CA63467004E00A3 /* NowPlayingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingTableViewCell.swift; sourceTree = "<group>"; };
-		0533AACE2CA63467004E00A3 /* NowPlayingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NowPlayingTableViewCell.xib; sourceTree = "<group>"; };
 		0533AAD42CA6356C004E00A3 /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		0533AAD52CA6356C004E00A3 /* UpcomingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingViewController.xib; sourceTree = "<group>"; };
 		0533AADB2CA635E5004E00A3 /* PopularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularViewController.swift; sourceTree = "<group>"; };
 		0533AADC2CA635E5004E00A3 /* PopularViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularViewController.xib; sourceTree = "<group>"; };
+		0533AAE92CA6DF06004E00A3 /* NowPlayingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewCell.swift; sourceTree = "<group>"; };
+		0533AAEA2CA6DF06004E00A3 /* NowPlayingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NowPlayingCollectionViewCell.xib; sourceTree = "<group>"; };
+		0533AAEE2CA6E6E6004E00A3 /* upcomingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upcomingViewModel.swift; sourceTree = "<group>"; };
+		0533AAF12CA6E71B004E00A3 /* MoviesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesResponse.swift; sourceTree = "<group>"; };
+		0533AAF42CA6E74D004E00A3 /* NowPlayingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewModel.swift; sourceTree = "<group>"; };
+		0533AAF82CA6E78B004E00A3 /* PopularViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,7 @@
 		0533AA882CA630E1004E00A3 /* BankMisrMovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				0533AAF02CA6E70A004E00A3 /* Model */,
 				0533AAC22CA6337A004E00A3 /* Scenes */,
 				0533AABB2CA6324B004E00A3 /* Services */,
 				0533AABA2CA63133004E00A3 /* Utilities */,
@@ -216,6 +225,7 @@
 		0533AAC72CA633F6004E00A3 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				0533AAF32CA6E73C004E00A3 /* ViewModel */,
 				0533AAC82CA63400004E00A3 /* View */,
 			);
 			path = Presentation;
@@ -226,8 +236,8 @@
 			children = (
 				0533AAC92CA63410004E00A3 /* NowPlayingViewController.swift */,
 				0533AACA2CA63410004E00A3 /* NowPlayingViewController.xib */,
-				0533AACD2CA63467004E00A3 /* NowPlayingTableViewCell.swift */,
-				0533AACE2CA63467004E00A3 /* NowPlayingTableViewCell.xib */,
+				0533AAE92CA6DF06004E00A3 /* NowPlayingCollectionViewCell.swift */,
+				0533AAEA2CA6DF06004E00A3 /* NowPlayingCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +253,7 @@
 		0533AAD22CA6354B004E00A3 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				0533AAED2CA6E6D0004E00A3 /* ViewModel */,
 				0533AAD32CA63554004E00A3 /* View */,
 			);
 			path = Presentation;
@@ -268,6 +279,7 @@
 		0533AAD92CA635CA004E00A3 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				0533AAF72CA6E774004E00A3 /* ViewModel */,
 				0533AADA2CA635D4004E00A3 /* View */,
 			);
 			path = Presentation;
@@ -280,6 +292,38 @@
 				0533AADC2CA635E5004E00A3 /* PopularViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0533AAED2CA6E6D0004E00A3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0533AAEE2CA6E6E6004E00A3 /* upcomingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0533AAF02CA6E70A004E00A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0533AAF12CA6E71B004E00A3 /* MoviesResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0533AAF32CA6E73C004E00A3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0533AAF42CA6E74D004E00A3 /* NowPlayingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0533AAF72CA6E774004E00A3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0533AAF82CA6E78B004E00A3 /* PopularViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,10 +432,10 @@
 			files = (
 				0533AA932CA630E2004E00A3 /* Assets.xcassets in Resources */,
 				0533AA962CA630E2004E00A3 /* Base in Resources */,
+				0533AAEB2CA6DF06004E00A3 /* NowPlayingCollectionViewCell.xib in Resources */,
 				0533AAD72CA6356C004E00A3 /* UpcomingViewController.xib in Resources */,
 				0533AACC2CA63410004E00A3 /* NowPlayingViewController.xib in Resources */,
 				0533AADE2CA635E6004E00A3 /* PopularViewController.xib in Resources */,
-				0533AAD02CA63467004E00A3 /* NowPlayingTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,15 +460,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0533AAEF2CA6E6E6004E00A3 /* upcomingViewModel.swift in Sources */,
 				0533AAD62CA6356C004E00A3 /* UpcomingViewController.swift in Sources */,
 				0533AABE2CA63272004E00A3 /* NetworkManager.swift in Sources */,
 				0533AAC12CA632AC004E00A3 /* internetConnectivity.swift in Sources */,
 				0533AADD2CA635E6004E00A3 /* PopularViewController.swift in Sources */,
+				0533AAF22CA6E71B004E00A3 /* MoviesResponse.swift in Sources */,
 				0533AA8A2CA630E1004E00A3 /* AppDelegate.swift in Sources */,
 				0533AAC52CA633A7004E00A3 /* TabBarViewController.swift in Sources */,
-				0533AACF2CA63467004E00A3 /* NowPlayingTableViewCell.swift in Sources */,
+				0533AAF52CA6E74D004E00A3 /* NowPlayingViewModel.swift in Sources */,
 				0533AACB2CA63410004E00A3 /* NowPlayingViewController.swift in Sources */,
 				0533AA8C2CA630E1004E00A3 /* SceneDelegate.swift in Sources */,
+				0533AAF92CA6E78B004E00A3 /* PopularViewModel.swift in Sources */,
+				0533AAEC2CA6DF06004E00A3 /* NowPlayingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,7 +652,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -635,7 +683,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
