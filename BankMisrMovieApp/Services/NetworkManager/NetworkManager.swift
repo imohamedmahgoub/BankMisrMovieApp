@@ -42,5 +42,26 @@ class NetworkManager : NetworkManagerProtocol {
         }.resume()
     }
     
+    func getMovieDetails<T: Codable> (movieId: Int, model: T.Type,handler: @escaping (T?, Error?) -> Void){
+        guard var url = URL(string: "\(baseUrl)\(movieId)") else {
+            handler(nil, NetworkError.invalidURL)
+            return
+        }
+        let urlQuaryItem = URLQueryItem(name: "api_key", value: "4bc428766cc04018cb0b4cd2755baa97")
+        url.append(queryItems: [urlQuaryItem])
+        print(url)
+                
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            do{
+                guard let data else {
+                    handler(nil, error)
+                    return
+                }
+                let result = try? JSONDecoder().decode(model, from: data)
+                handler(result, nil)
+            }
+        }.resume()
+    }
+    
 
 }

@@ -71,8 +71,18 @@ extension PopularViewController : UICollectionViewDelegate,UICollectionViewDataS
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = MovieDetailsViewController()
+        vc.viewModel.id = viewModel.arr[indexPath.row].id ?? 0
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 15, left: 25, bottom: 15, right: 25)
+        return UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 25)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        25
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

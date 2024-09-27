@@ -22,15 +22,13 @@ class NowPlayingCollectionViewCell: UICollectionViewCell {
     func setupCell() {
         self.layer.cornerRadius = 20.0
         self.layer.borderWidth = 1.0
-        self.layer.borderColor = UIColor.black.cgColor
-        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.borderColor = UIColor.red.cgColor
+        self.layer.shadowColor = UIColor.white.cgColor
         self.layer.shadowRadius = 2.0
-        
         
         movieImage.layer.cornerRadius = 20.0
         labelsView.layer.cornerRadius = 20.0
         labelsView.layer.borderWidth = 0.3
-        labelsView.layer.borderColor = UIColor.black.cgColor
+        labelsView.layer.borderColor = UIColor.red.cgColor
     }
-
 }

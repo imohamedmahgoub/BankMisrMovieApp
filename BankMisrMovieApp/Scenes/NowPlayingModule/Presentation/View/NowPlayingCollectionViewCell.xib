@@ -25,27 +25,28 @@
                                 <rect key="frame" x="0.0" y="0.0" width="137" height="186"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aja-aM-nFs">
-                                <rect key="frame" x="0.0" y="139.66666666666666" width="137" height="46.333333333333343"/>
+                                <rect key="frame" x="0.0" y="124.66666666666667" width="137" height="61.333333333333329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4c-uH-lot">
-                                        <rect key="frame" x="16" y="4" width="85" height="20.333333333333332"/>
+                                        <rect key="frame" x="8" y="3.9999999999999858" width="121" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQM-FH-39i">
-                                        <rect key="frame" x="15.999999999999996" y="28.333333333333339" width="63.666666666666657" height="14.333333333333332"/>
+                                        <rect key="frame" x="7.9999999999999964" y="28.333333333333325" width="63.666666666666657" height="14.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstItem="I4c-uH-lot" firstAttribute="top" secondItem="aja-aM-nFs" secondAttribute="top" constant="4" id="4z5-9r-I57"/>
                                     <constraint firstItem="yQM-FH-39i" firstAttribute="leading" secondItem="I4c-uH-lot" secondAttribute="leading" id="6Yz-3U-Ktj"/>
+                                    <constraint firstAttribute="trailing" secondItem="I4c-uH-lot" secondAttribute="trailing" constant="8" id="MlQ-Oj-YpK"/>
                                     <constraint firstItem="yQM-FH-39i" firstAttribute="top" secondItem="I4c-uH-lot" secondAttribute="bottom" constant="4" id="aej-xd-r0D"/>
-                                    <constraint firstItem="I4c-uH-lot" firstAttribute="leading" secondItem="aja-aM-nFs" secondAttribute="leading" constant="16" id="oWH-bh-OOi"/>
+                                    <constraint firstItem="I4c-uH-lot" firstAttribute="leading" secondItem="aja-aM-nFs" secondAttribute="leading" constant="8" id="oWH-bh-OOi"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -54,7 +55,7 @@
                             <constraint firstItem="aFD-c8-1Ft" firstAttribute="top" secondItem="gQS-Ph-wFZ" secondAttribute="top" id="1te-US-u52"/>
                             <constraint firstAttribute="bottom" secondItem="aFD-c8-1Ft" secondAttribute="bottom" id="2sc-hK-Ewe"/>
                             <constraint firstItem="aja-aM-nFs" firstAttribute="leading" secondItem="gQS-Ph-wFZ" secondAttribute="leading" id="4zg-wl-6GQ"/>
-                            <constraint firstItem="aja-aM-nFs" firstAttribute="height" secondItem="gQS-Ph-wFZ" secondAttribute="height" multiplier="0.25" id="5uC-2A-BnU"/>
+                            <constraint firstItem="aja-aM-nFs" firstAttribute="height" secondItem="gQS-Ph-wFZ" secondAttribute="height" multiplier="0.33" id="5uC-2A-BnU"/>
                             <constraint firstAttribute="trailing" secondItem="aja-aM-nFs" secondAttribute="trailing" id="KBg-UA-IMd"/>
                             <constraint firstAttribute="bottom" secondItem="aja-aM-nFs" secondAttribute="bottom" id="fqV-pB-5xt"/>
                             <constraint firstItem="aFD-c8-1Ft" firstAttribute="leading" secondItem="gQS-Ph-wFZ" secondAttribute="leading" id="iQz-f6-4Sf"/>
@@ -83,6 +84,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
