@@ -10,7 +10,6 @@ import Foundation
 class NowPlayingViewModel {
     
     private let network = NetworkManager()
-    
     var arr = [MovieDetailsEntity]()
     var pagesCount : Int?
     

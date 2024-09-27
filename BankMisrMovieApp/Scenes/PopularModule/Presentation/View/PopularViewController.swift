@@ -24,7 +24,8 @@ class PopularViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = "NowPlaying Movies"
+        tabBarController?.tabBar.isHidden = false
+        self.title = "Popular"
     }
     
     func setupCollectionView() {
@@ -42,6 +43,19 @@ class PopularViewController: UIViewController {
         view.addSubview(indicator)
     }
     func setupNetworkCall(){
+        if InternetConnectivity.hasInternetConnect() {
+            getData()
+        }else{
+            let alert = UIAlertController(title: "Poor internet connection", message: "Please make sure that you are connected to internet", preferredStyle: .alert)
+            let dismissAction = UIAlertAction(title: "Dismiss", style: .destructive) { _ in
+                self.getData()
+            }
+            alert.addAction(dismissAction)
+            self.present(alert, animated: true)
+        }
+    }
+    
+    func getData() {
         viewModel.getData(page: currentPage) { [weak self] in
             guard let self else { return }
             DispatchQueue.main.async {
@@ -49,7 +63,6 @@ class PopularViewController: UIViewController {
                 self.indicator.stopAnimating()
             }
         }
-        
     }
 }
 
@@ -86,22 +99,26 @@ extension PopularViewController : UICollectionViewDelegate,UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: 250)
+        return CGSize(width: 160, height: 250)
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         let frameHeight = scrollView.frame.size.height
         
-        if offsetY > contentHeight - frameHeight + 200 {
+        if offsetY > contentHeight - frameHeight + 100 {
             if !isFetchingMovies && currentPage < viewModel.pagesCount ?? 0 {
                 currentPage += 1
                 viewModel.getData(page: currentPage) { [weak self] in
                     guard let self else { return }
                     DispatchQueue.main.async {
+                        self.indicator.startAnimating()
                         self.popularCollectionView.reloadData()
+                        self.indicator.stopAnimating()
                     }
                 }
+            }else{
+                return
             }
         }
     }

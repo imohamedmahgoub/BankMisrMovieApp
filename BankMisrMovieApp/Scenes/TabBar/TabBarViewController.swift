@@ -19,15 +19,14 @@ class TabBarViewController: UITabBarController {
 
         // Set the titles and tab bar images
         nowPlayingVC.tabBarItem = UITabBarItem(title: "Now Playing", image: UIImage(named: "nowPlaying"), tag: 0)
-        upcomingVC.tabBarItem = UITabBarItem(title: "Popular", image: UIImage(named: "popular"), tag: 1)
-        popularVC.tabBarItem = UITabBarItem(title: "Upcoming", image: UIImage(named: "movieCamera"), tag: 2)
+        popularVC.tabBarItem = UITabBarItem(title: "Popular", image: UIImage(named: "popular"), tag: 1)
+        upcomingVC.tabBarItem = UITabBarItem(title: "Upcoming", image: UIImage(named: "movieCamera"), tag: 2)
 
         // Assign the view controllers to the tab bar
         viewControllers = [nowPlayingVC, upcomingVC, popularVC]
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-//        super.tabBar(tabBar, didSelect: item)
         simpleAnnimationWhenSelectItem(item)
     }
     

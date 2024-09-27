@@ -27,9 +27,7 @@ class NetworkManager : NetworkManagerProtocol {
         let urlQuaryItem1 = URLQueryItem(name: "api_key", value: "4bc428766cc04018cb0b4cd2755baa97")
         let urlQuaryItem2 = URLQueryItem(name: "page", value: "\(pageNumber)")
         
-        url.append(queryItems: [urlQuaryItem1,urlQuaryItem2])
-        print(url)
-                
+        url.append(queryItems: [urlQuaryItem1,urlQuaryItem2])                
         URLSession.shared.dataTask(with: url) { data, response, error in
             do{
                 guard let data else {
@@ -49,8 +47,6 @@ class NetworkManager : NetworkManagerProtocol {
         }
         let urlQuaryItem = URLQueryItem(name: "api_key", value: "4bc428766cc04018cb0b4cd2755baa97")
         url.append(queryItems: [urlQuaryItem])
-        print(url)
-                
         URLSession.shared.dataTask(with: url) { data, response, error in
             do{
                 guard let data else {

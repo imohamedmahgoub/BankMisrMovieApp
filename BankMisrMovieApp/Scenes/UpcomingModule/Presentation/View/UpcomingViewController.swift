@@ -19,11 +19,11 @@ class UpcomingViewController: UIViewController {
         super.viewDidLoad()
         setupCollectionView()
         setupNetworkCall()
-        
     }
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.title = "Upcoming Movies"
+        super.viewWillAppear(animated)     
+        tabBarController?.tabBar.isHidden = false
+        self.title = "Upcoming"
     }
     func setupCollectionView() {
         upcomingCollectionView.dataSource = self
@@ -40,6 +40,19 @@ class UpcomingViewController: UIViewController {
         view.addSubview(indicator)
     }
     func setupNetworkCall(){
+        if InternetConnectivity.hasInternetConnect() {
+            getData()
+        }else{
+            let alert = UIAlertController(title: "Poor internet connection", message: "Please make sure that you are connected to internet", preferredStyle: .alert)
+            let dismissAction = UIAlertAction(title: "Dismiss", style: .destructive) { _ in
+                self.getData()
+            }
+            alert.addAction(dismissAction)
+            self.present(alert, animated: true)
+        }
+    }
+    
+    func getData() {
         viewModel.getData(page: currentPage) { [weak self] in
             guard let self else { return }
             DispatchQueue.main.async {
@@ -47,7 +60,6 @@ class UpcomingViewController: UIViewController {
                 self.indicator.stopAnimating()
             }
         }
-        
     }
 }
 
@@ -84,7 +96,7 @@ extension UpcomingViewController :  UICollectionViewDelegate,UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: 250)
+        return CGSize(width: 160, height: 250)
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -92,15 +104,19 @@ extension UpcomingViewController :  UICollectionViewDelegate,UICollectionViewDat
         let contentHeight = scrollView.contentSize.height
         let frameHeight = scrollView.frame.size.height
         
-        if offsetY > contentHeight - frameHeight + 200 {
+        if offsetY > contentHeight - frameHeight + 100 {
             if !isFetchingMovies && currentPage < viewModel.pagesCount ?? 0 {
                 currentPage += 1
                 viewModel.getData(page: currentPage) { [weak self] in
                     guard let self else { return }
                     DispatchQueue.main.async {
+                        self.indicator.startAnimating()
                         self.upcomingCollectionView.reloadData()
+                        self.indicator.stopAnimating()
                     }
                 }
+            }else{
+                return
             }
         }
     }

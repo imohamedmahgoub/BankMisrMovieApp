@@ -27,11 +27,22 @@ class MovieDetailsViewController: UIViewController {
         setupCollectionView()
         getDetails()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
+    }
     
+
+    @IBAction func didSelectUrl(_ sender: Any) {
+        let url = URL(string: viewModel.detailsArray.first?.homepage ?? "")
+        guard let url = url else { return }
+        UIApplication.shared.open(url)
+    }
     func getDetails() {
         viewModel.getMovieDetails {
             DispatchQueue.main.async { [weak self] in
                 guard let self else { return }
+                self.title = viewModel.detailsArray.first?.title
                 self.movieInfo.text = viewModel.detailsArray.first?.overview
                 self.movieRating.text = String(format: "%.1f", viewModel.detailsArray.first?.voteAverage ?? 0)
                 self.movieTitle.text = viewModel.detailsArray.first?.title
@@ -50,6 +61,8 @@ class MovieDetailsViewController: UIViewController {
                     DispatchQueue.main.async {
                         self.posterImage.image = image
                         self.posterImage.layer.cornerRadius = 20.0
+                        self.posterImage.layer.borderWidth = 1.0
+                        self.posterImage.layer.borderColor = UIColor.gray.cgColor
                     }
                 }
                 myView.layer.cornerRadius = 20.0
@@ -100,10 +113,9 @@ extension MovieDetailsViewController : UICollectionViewDelegate, UICollectionVie
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 80, height: 100)
+        return CGSize(width: 70, height: collectionView.frame.height - 20)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        UIEdgeInsets(top: 0, left: 25, bottom: 0, right: 25)
+        UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 25)
     }
-    
 }
