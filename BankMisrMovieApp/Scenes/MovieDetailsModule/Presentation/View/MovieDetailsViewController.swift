@@ -8,8 +8,6 @@
 import UIKit
 
 class MovieDetailsViewController: UIViewController {
-
-    let viewModel = MovieDetailsViewModel()
     
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var posterImage: UIImageView!
@@ -22,6 +20,8 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var moviePageUrl: UILabel!
     @IBOutlet weak var myView: UIView!
     
+    var viewModel : MovieDetailsViewModelProtocol = MovieDetailsViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
@@ -51,20 +51,15 @@ class MovieDetailsViewController: UIViewController {
                 self.releaseDateLabel.text = viewModel.detailsArray.first?.releaseDate
                 
                 let backgroundImageUrl = URL(string: "https://image.tmdb.org/t/p/w500/\(viewModel.detailsArray.first?.backdropPath ?? "")")
-                loadImage(from: backgroundImageUrl!) { image in
-                    DispatchQueue.main.async {
-                        self.backgroundImage.image = image
-                    }
-                }
+                self.backgroundImage.loadImage(from: backgroundImageUrl)
+                
                 let posterImageUrl = URL(string: "https://image.tmdb.org/t/p/w500/\(viewModel.detailsArray.first?.posterPath ?? "")")
-                loadImage(from: posterImageUrl!) { image in
-                    DispatchQueue.main.async {
-                        self.posterImage.image = image
-                        self.posterImage.layer.cornerRadius = 20.0
-                        self.posterImage.layer.borderWidth = 1.0
-                        self.posterImage.layer.borderColor = UIColor.gray.cgColor
-                    }
-                }
+                
+                self.posterImage.loadImage(from: posterImageUrl)
+                self.posterImage.layer.cornerRadius = 20.0
+                self.posterImage.layer.borderWidth = 1.0
+                self.posterImage.layer.borderColor = UIColor.gray.cgColor
+                
                 myView.layer.cornerRadius = 20.0
                 movieGenresCollectionView.reloadData()
             }

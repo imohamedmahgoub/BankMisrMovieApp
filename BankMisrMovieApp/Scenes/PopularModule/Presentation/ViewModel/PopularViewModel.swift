@@ -7,16 +7,22 @@
 
 import Foundation
 
-class PopularViewModel {
+protocol ViewModelProtocol {
+    func getData(page: Int ,handler: @escaping (() -> Void))
+    var movieArray : [MovieDetailsEntity] { get }
+    var pagesCount: Int? { get }
+}
+
+class PopularViewModel: ViewModelProtocol {
     
-    private let network = NetworkManager()
+    private var network: NetworkManagerProtocol?
+    var movieArray = [MovieDetailsEntity]()
+    var pagesCount: Int?
     
-    var arr = [MovieDetailsEntity]()
-    var pagesCount : Int?
-    
-    func getData(page : Int ,handler : @escaping (() -> Void)) {
+    func getData(page: Int ,handler: @escaping (() -> Void)) {
         let path = "popular"
-        network.getMovies(pageNumber: page, path: path, model: MovieEntity.self) { [weak self] response, error in
+        network = NetworkManager()
+        network?.getMovies(pageNumber: page, path: path, model: MovieEntity.self) { [weak self] response, error in
             guard let self else { return }
             if let error {
                 print(error.localizedDescription)
@@ -24,7 +30,7 @@ class PopularViewModel {
             }
             
             if let response {
-                arr.append(contentsOf: response.results ?? [])
+                movieArray.append(contentsOf: response.results ?? [])
                 pagesCount = response.totalPages
                 handler()
                 return

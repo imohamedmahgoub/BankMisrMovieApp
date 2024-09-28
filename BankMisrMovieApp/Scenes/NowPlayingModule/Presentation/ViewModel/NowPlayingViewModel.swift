@@ -7,15 +7,16 @@
 
 import Foundation
 
-class NowPlayingViewModel {
+class NowPlayingViewModel: ViewModelProtocol{
     
-    private let network = NetworkManager()
-    var arr = [MovieDetailsEntity]()
+    private var network : NetworkManagerProtocol?
+    var movieArray = [MovieDetailsEntity]()
     var pagesCount : Int?
     
     func getData(page : Int ,handler : @escaping (() -> Void)) {
         let path = "now_playing"
-        network.getMovies(pageNumber: page, path: path, model: MovieEntity.self) { [weak self] response, error in
+        network = NetworkManager()
+        network?.getMovies(pageNumber: page, path: path, model: MovieEntity.self) { [weak self] response, error in
             guard let self else { return }
             if let error {
                 print(error.localizedDescription)
@@ -23,7 +24,7 @@ class NowPlayingViewModel {
             }
             
             if let response {
-                arr.append(contentsOf: response.results ?? [])
+                movieArray.append(contentsOf: response.results ?? [])
                 pagesCount = response.totalPages
                 handler()
                 return

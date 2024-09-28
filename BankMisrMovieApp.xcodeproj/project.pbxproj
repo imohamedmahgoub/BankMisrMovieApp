@@ -35,6 +35,7 @@
 		0533AB092CA711C8004E00A3 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533AB062CA711C8004E00A3 /* MovieDetailsViewController.swift */; };
 		0533AB0C2CA72242004E00A3 /* MovieDetailsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0533AB0B2CA72242004E00A3 /* MovieDetailsCollectionViewCell.xib */; };
 		0533AB0D2CA72242004E00A3 /* MovieDetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533AB0A2CA72242004E00A3 /* MovieDetailsCollectionViewCell.swift */; };
+		05D70D2B2CA8394F0067F147 /* UiImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D70D2A2CA8394F0067F147 /* UiImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		0533AB072CA711C8004E00A3 /* MovieDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsViewController.xib; sourceTree = "<group>"; };
 		0533AB0A2CA72242004E00A3 /* MovieDetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsCollectionViewCell.swift; sourceTree = "<group>"; };
 		0533AB0B2CA72242004E00A3 /* MovieDetailsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsCollectionViewCell.xib; sourceTree = "<group>"; };
+		05D70D2A2CA8394F0067F147 /* UiImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				0533AAC22CA6337A004E00A3 /* Scenes */,
 				0533AABA2CA63133004E00A3 /* Utilities */,
 				0533AAB92CA63123004E00A3 /* Core */,
+				05D70D292CA839360067F147 /* Extensions */,
 			);
 			path = BankMisrMovieApp;
 			sourceTree = "<group>";
@@ -376,6 +379,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		05D70D292CA839360067F147 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				05D70D2A2CA8394F0067F147 /* UiImageExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -525,6 +536,7 @@
 				0533AAC52CA633A7004E00A3 /* TabBarViewController.swift in Sources */,
 				0533AAF52CA6E74D004E00A3 /* NowPlayingViewModel.swift in Sources */,
 				0533AACB2CA63410004E00A3 /* NowPlayingViewController.swift in Sources */,
+				05D70D2B2CA8394F0067F147 /* UiImageExtension.swift in Sources */,
 				0533AA8C2CA630E1004E00A3 /* SceneDelegate.swift in Sources */,
 				0533AAF92CA6E78B004E00A3 /* PopularViewModel.swift in Sources */,
 				0533AAEC2CA6DF06004E00A3 /* NowPlayingCollectionViewCell.swift in Sources */,
