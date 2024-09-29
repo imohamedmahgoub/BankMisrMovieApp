@@ -14,9 +14,7 @@ class MovieDetailsCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        view.layer.cornerRadius = 15.0
-        view.layer.borderColor = UIColor.white.cgColor
-        view.layer.borderColor = UIColor.white.cgColor
+        view.layer.cornerRadius = 20.0
     }
 
 }

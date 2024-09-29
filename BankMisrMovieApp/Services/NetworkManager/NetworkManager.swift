@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 protocol NetworkManagerProtocol {
     func getMovies<T: Codable> (pageNumber: Int?, path: String, model: T.Type, handler: @escaping (T?, Error?) -> Void)

@@ -123,7 +123,7 @@ extension NowPlayingViewController : UICollectionViewDelegate,UICollectionViewDa
         let contentHeight = scrollView.contentSize.height
         let frameHeight = scrollView.frame.size.height
         
-        if offsetY > contentHeight - frameHeight + 200 {
+        if offsetY > contentHeight - frameHeight + 150 {
             if !isFetchingMovies && currentPage < viewModel.pagesCount ?? 0 {
                 currentPage += 1
                 viewModel.getData(page: currentPage) { [weak self] in

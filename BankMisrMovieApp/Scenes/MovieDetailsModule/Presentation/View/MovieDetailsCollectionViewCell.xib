@@ -39,6 +39,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="vMd-EA-igi" secondAttribute="trailing" id="1pM-eo-MSJ"/>
+                <constraint firstAttribute="width" secondItem="vMd-EA-igi" secondAttribute="width" id="OLO-gy-Q9I"/>
                 <constraint firstAttribute="bottom" secondItem="vMd-EA-igi" secondAttribute="bottom" id="lTq-cx-vZb"/>
                 <constraint firstItem="vMd-EA-igi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tUH-8f-ZlM"/>
                 <constraint firstItem="vMd-EA-igi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xiS-Ry-uqI"/>

@@ -64,7 +64,6 @@ class MovieDetailsViewController: UIViewController {
                 self.posterImage.layer.borderWidth = 1.0
                 self.posterImage.layer.borderColor = UIColor.gray.cgColor
                 
-                myView.layer.cornerRadius = 20.0
                 movieGenresCollectionView.reloadData()
             }
         }

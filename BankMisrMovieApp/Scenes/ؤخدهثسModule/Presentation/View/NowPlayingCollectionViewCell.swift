@@ -29,11 +29,5 @@ class NowPlayingCollectionViewCell: UICollectionViewCell {
         labelsView.layer.borderWidth = 0.3
         labelsView.layer.borderColor = UIColor.gray.cgColor
         
-        self.layer.shadowColor = UIColor.gray.cgColor
-        self.layer.shadowOffset = .zero
-        self.layer.shadowOpacity = 0.6
-        self.layer.shadowRadius = 10.0
-        self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
-        self.layer.shouldRasterize = true
     }
 }

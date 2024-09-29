@@ -11,7 +11,7 @@
 		0533AA8C2CA630E1004E00A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533AA8B2CA630E1004E00A3 /* SceneDelegate.swift */; };
 		0533AA932CA630E2004E00A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0533AA922CA630E2004E00A3 /* Assets.xcassets */; };
 		0533AA962CA630E2004E00A3 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 0533AA952CA630E2004E00A3 /* Base */; };
-		0533AAA12CA630E2004E00A3 /* BankMisrMovieAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533AAA02CA630E2004E00A3 /* BankMisrMovieAppTests.swift */; };
+		0533AAA12CA630E2004E00A3 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533AAA02CA630E2004E00A3 /* NetworkManagerTests.swift */; };
 		0533AAAB2CA630E2004E00A3 /* BankMisrMovieAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533AAAA2CA630E2004E00A3 /* BankMisrMovieAppUITests.swift */; };
 		0533AAAD2CA630E2004E00A3 /* BankMisrMovieAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533AAAC2CA630E2004E00A3 /* BankMisrMovieAppUITestsLaunchTests.swift */; };
 		0533AABE2CA63272004E00A3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533AABD2CA63272004E00A3 /* NetworkManager.swift */; };
@@ -36,6 +36,8 @@
 		05D70D3F2CA8C7EE0067F147 /* MovieDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D70D3E2CA8C7EE0067F147 /* MovieDataSource.swift */; };
 		05D70D422CA8C9430067F147 /* MovieRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D70D412CA8C9430067F147 /* MovieRepo.swift */; };
 		05D70D452CA8CB100067F147 /* MovieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D70D442CA8CB100067F147 /* MovieUseCase.swift */; };
+		05D70D482CA8ED3D0067F147 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D70D472CA8ED3D0067F147 /* MockNetworkManager.swift */; };
+		05D70D4A2CA8F5970067F147 /* MockNetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D70D492CA8F5970067F147 /* MockNetworkManagerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +65,7 @@
 		0533AA952CA630E2004E00A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0533AA972CA630E2004E00A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0533AA9C2CA630E2004E00A3 /* BankMisrMovieAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankMisrMovieAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0533AAA02CA630E2004E00A3 /* BankMisrMovieAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankMisrMovieAppTests.swift; sourceTree = "<group>"; };
+		0533AAA02CA630E2004E00A3 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		0533AAA62CA630E2004E00A3 /* BankMisrMovieAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankMisrMovieAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0533AAAA2CA630E2004E00A3 /* BankMisrMovieAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankMisrMovieAppUITests.swift; sourceTree = "<group>"; };
 		0533AAAC2CA630E2004E00A3 /* BankMisrMovieAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankMisrMovieAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -89,6 +91,8 @@
 		05D70D3E2CA8C7EE0067F147 /* MovieDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataSource.swift; sourceTree = "<group>"; };
 		05D70D412CA8C9430067F147 /* MovieRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepo.swift; sourceTree = "<group>"; };
 		05D70D442CA8CB100067F147 /* MovieUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieUseCase.swift; sourceTree = "<group>"; };
+		05D70D472CA8ED3D0067F147 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		05D70D492CA8F5970067F147 /* MockNetworkManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManagerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,9 +145,9 @@
 			children = (
 				0533AABB2CA6324B004E00A3 /* Services */,
 				0533AAC22CA6337A004E00A3 /* Scenes */,
+				05D70D292CA839360067F147 /* Extensions */,
 				0533AABA2CA63133004E00A3 /* Utilities */,
 				0533AAB92CA63123004E00A3 /* Core */,
-				05D70D292CA839360067F147 /* Extensions */,
 			);
 			path = BankMisrMovieApp;
 			sourceTree = "<group>";
@@ -151,7 +155,8 @@
 		0533AA9F2CA630E2004E00A3 /* BankMisrMovieAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				0533AAA02CA630E2004E00A3 /* BankMisrMovieAppTests.swift */,
+				05D70D462CA8ED230067F147 /* Mock */,
+				0533AAA02CA630E2004E00A3 /* NetworkManagerTests.swift */,
 			);
 			path = BankMisrMovieAppTests;
 			sourceTree = "<group>";
@@ -412,6 +417,15 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
+		05D70D462CA8ED230067F147 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				05D70D472CA8ED3D0067F147 /* MockNetworkManager.swift */,
+				05D70D492CA8F5970067F147 /* MockNetworkManagerTest.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -573,7 +587,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0533AAA12CA630E2004E00A3 /* BankMisrMovieAppTests.swift in Sources */,
+				05D70D482CA8ED3D0067F147 /* MockNetworkManager.swift in Sources */,
+				0533AAA12CA630E2004E00A3 /* NetworkManagerTests.swift in Sources */,
+				05D70D4A2CA8F5970067F147 /* MockNetworkManagerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
