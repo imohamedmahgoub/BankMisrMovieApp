@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieDetailsCollectionViewCell" id="gTV-IL-0wX" customClass="MovieDetailsCollectionViewCell" customModule="BankMisrMovieApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="71" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="71" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vMd-EA-igi">
+                        <rect key="frame" x="0.0" y="0.0" width="71" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiZ-qQ-Zii">
+                                <rect key="frame" x="8" y="8" width="55" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RiZ-qQ-Zii" firstAttribute="top" secondItem="vMd-EA-igi" secondAttribute="top" constant="8" id="60l-uc-ISD"/>
+                            <constraint firstAttribute="bottom" secondItem="RiZ-qQ-Zii" secondAttribute="bottom" constant="8" id="De6-6O-h3S"/>
+                            <constraint firstAttribute="trailing" secondItem="RiZ-qQ-Zii" secondAttribute="trailing" constant="8" id="Dsp-6h-2n1"/>
+                            <constraint firstItem="RiZ-qQ-Zii" firstAttribute="leading" secondItem="vMd-EA-igi" secondAttribute="leading" constant="8" id="lUH-OB-OLX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vMd-EA-igi" secondAttribute="trailing" id="1pM-eo-MSJ"/>
+                <constraint firstAttribute="width" secondItem="vMd-EA-igi" secondAttribute="width" id="OLO-gy-Q9I"/>
+                <constraint firstAttribute="bottom" secondItem="vMd-EA-igi" secondAttribute="bottom" id="lTq-cx-vZb"/>
+                <constraint firstItem="vMd-EA-igi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tUH-8f-ZlM"/>
+                <constraint firstItem="vMd-EA-igi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xiS-Ry-uqI"/>
+            </constraints>
+            <size key="customSize" width="71" height="50"/>
+            <connections>
+                <outlet property="genreLabel" destination="RiZ-qQ-Zii" id="EEH-IS-XkN"/>
+                <outlet property="view" destination="vMd-EA-igi" id="yKC-7q-VMZ"/>
+            </connections>
+            <point key="canvasLocation" x="80.152671755725194" y="19.718309859154932"/>
+        </collectionViewCell>
+    </objects>
+</document>
