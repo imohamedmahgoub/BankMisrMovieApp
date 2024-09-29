@@ -8,26 +8,33 @@
 import Foundation
 
 protocol MovieDetailsViewModelProtocol {
-    func getMovieDetails(handler: @escaping (()-> Void))
-    var detailsArray : [MovieDetailsResponse] { get }
-    var id : Int { get set }
+    func getMovieDetails(handler: @escaping ((_ data: MovieDetailsResponse)-> Void))  
+    var genres : [Genre] { get }
+    var movieUrl: String? { get }
 }
-
 class MovieDetailsViewModel: MovieDetailsViewModelProtocol {
-    var id = 0
-    private var network: NetworkManagerMovieDetailsProtocol?
-    var detailsArray = [MovieDetailsResponse]()
     
-    func getMovieDetails(handler: @escaping (()-> Void)){
-        network = NetworkManager()
-        network?.getMovieDetails(movieId: id, model: MovieDetailsResponse.self) { response, error in
+    private var useCase: MovieDetailsUseCaseProtocol
+    private var id: Int
+    var genres = [Genre]()
+    var movieUrl: String?
+    
+    init(id: Int, useCase: MovieDetailsUseCaseProtocol = MovieDetailsUseCase()) {
+        self.id = id
+        self.useCase = useCase
+    }
+    
+    func getMovieDetails(handler: @escaping ((_ data: MovieDetailsResponse)-> Void)){
+        useCase.getMovieDetails(id: id) {[weak self] response, error in
+            guard let self else {return}
             if let error {
                 print(error.localizedDescription)
                 return
             }
             if let response {
-                self.detailsArray = [response]
-                handler()
+                self.genres = response.genres ?? []
+                self.movieUrl = response.homepage
+                handler(response)
                 return
             }
         }

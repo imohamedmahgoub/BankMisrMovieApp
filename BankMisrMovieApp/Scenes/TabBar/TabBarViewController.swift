@@ -13,9 +13,9 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         // Create instances of your view controllers
-        let nowPlayingVC = UINavigationController(rootViewController: NowPlayingViewController())
-        let upcomingVC = UINavigationController(rootViewController: UpcomingViewController())
-        let popularVC = UINavigationController(rootViewController: PopularViewController())
+        let nowPlayingVC = UINavigationController(rootViewController: NowPlayingViewController(type: .nowPlaying))
+        let upcomingVC = UINavigationController(rootViewController: NowPlayingViewController(type: .upcoming))
+        let popularVC = UINavigationController(rootViewController: NowPlayingViewController(type: .popular))
 
         // Set the titles and tab bar images
         nowPlayingVC.tabBarItem = UITabBarItem(title: "Now Playing", image: UIImage(named: "nowPlaying"), tag: 0)

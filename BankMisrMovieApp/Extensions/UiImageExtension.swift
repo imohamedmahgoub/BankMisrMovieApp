@@ -9,21 +9,18 @@ import Foundation
 import UIKit
 
 extension UIImageView {
-    func loadImage(from urlString: URL? ) {
- 
-        guard let urlString else { return }
+    func loadImage(from urlString: String?) {
+        guard let urlString,
+              let imageUrl = URL(string: "https://image.tmdb.org/t/p/w500/\(urlString)") else { return }
         
-        URLSession.shared.dataTask(with: urlString) { data, response, error in
-            // Check for errors and if data is available
-            if let error = error {
+        URLSession.shared.dataTask(with: imageUrl) { data, response, error in
+            if let error {
                 print("Error fetching image: \(error.localizedDescription)")
-                //self.image = UIImage()
                 return
             }
             
-            guard let data = data, let image = UIImage(data: data) else {
+            guard let data, let image = UIImage(data: data) else {
                 print("Could not decode image data.")
-//                self.image = UIImage()
                 return
             }
             
