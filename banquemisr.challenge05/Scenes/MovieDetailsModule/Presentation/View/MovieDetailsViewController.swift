@@ -56,7 +56,7 @@ class MovieDetailsViewController: UIViewController {
                 self.movieRating.text = String(format: "%.1f", data.voteAverage ?? 0)
                 self.movieTitle.text = data.title
                 self.moviePageUrl.text = data.homepage
-                self.runTimeLabel.text = "\(data.runtime ?? 0)"
+                self.runTimeLabel.text = "\(data.runtime ?? 0) min"
                 self.releaseDateLabel.text = data.releaseDate
                 self.languageLabel.text = (data.originalLanguage)?.uppercased()
                 self.backgroundImage.loadImage(from: data.backdropPath)
