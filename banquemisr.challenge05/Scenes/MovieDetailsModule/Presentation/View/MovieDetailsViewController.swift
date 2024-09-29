@@ -18,6 +18,7 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var runTimeLabel: UILabel!
     @IBOutlet weak var moviePageUrl: UILabel!
+    @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var myView: UIView!
     
     private var movieId : Int
@@ -57,6 +58,7 @@ class MovieDetailsViewController: UIViewController {
                 self.moviePageUrl.text = data.homepage
                 self.runTimeLabel.text = "\(data.runtime ?? 0)"
                 self.releaseDateLabel.text = data.releaseDate
+                self.languageLabel.text = (data.originalLanguage)?.uppercased()
                 self.backgroundImage.loadImage(from: data.backdropPath)
                 self.posterImage.loadImage(from: data.posterPath )
                 

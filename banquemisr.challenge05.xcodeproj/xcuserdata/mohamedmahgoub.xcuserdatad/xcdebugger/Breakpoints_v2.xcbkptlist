@@ -3,4 +3,38 @@
    uuid = "2DE2BE55-2444-497A-8BFD-CAB0168FFF22"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C482BC20-6687-42D0-8FC9-7AF511B9A035"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "banquemisr.challenge05/Scenes/&#x648;&#x654;&#x62e;&#x62f;&#x647;&#x62b;&#x633;Module/Data/Repo/MovieRepo.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "getMovie(pageNumber:path:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FFA4E02A-6565-4A31-A292-5B6CDEF33585"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "banquemisr.challenge05/Scenes/&#x648;&#x654;&#x62e;&#x62f;&#x647;&#x62b;&#x633;Module/Data/Repo/MovieRepo.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getMovie(pageNumber:path:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

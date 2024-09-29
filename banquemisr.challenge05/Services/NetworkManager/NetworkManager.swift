@@ -39,4 +39,5 @@ class NetworkManager: NetworkManagerProtocol {
 }
 enum NetworkError: Error {
     case invalidURL
+    case somethingWentWrong
 }

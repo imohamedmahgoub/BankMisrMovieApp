@@ -16,7 +16,7 @@ struct MovieDetailsResponse: Codable {
     let posterPath: String?
     let releaseDate: String?
     let runtime: Int?
-    let title: String?
+    let title, originalLanguage: String?
     let voteAverage: Double?
 
     enum CodingKeys: String, CodingKey {
@@ -28,6 +28,7 @@ struct MovieDetailsResponse: Codable {
         case runtime
         case title
         case voteAverage = "vote_average"
+        case originalLanguage = "original_language"
     }
 }
 

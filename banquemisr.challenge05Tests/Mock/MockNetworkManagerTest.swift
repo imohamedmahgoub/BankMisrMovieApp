@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import BankMisrMovieApp
+@testable import banquemisr_challenge05
 
 final class MockNetworkManagerTest: XCTestCase {
     

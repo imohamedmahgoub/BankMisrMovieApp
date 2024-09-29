@@ -5,77 +5,88 @@
 //  Created by Mohamed Mahgoub on 29/09/2024.
 //
 
-//import CoreData
-//import UIKit
-//
-//class CoreDataManager {
-//    static let shared = CoreDataManager()
-//    let persistentContainer: NSPersistentContainer
-//
-//    private init() {
-//        persistentContainer = NSPersistentContainer(name: "CoreDataManager")
-//        persistentContainer.loadPersistentStores { _, error in
-//            if let error = error {
-//                fatalError("Failed to load Core Data stack: \(error)")
-//            }
-//        }
-//    }
-//
-//    var context: NSManagedObjectContext {
-//        return persistentContainer.viewContext
-//    }
-//    
-//    func saveMovies(_ movieEntity: MovieEntity) {
-//        
-//        let movie = Movie(context: context)
-//        
-//        movie.page = Int64(movieEntity.page ?? 0)
-//        movie.totalPages = Int64(movieEntity.totalPages ?? 0)
-//        movie.totalResults = Int64(movieEntity.totalResults ?? 0)
-//
-//        movieEntity.results?.forEach { movieDetail in
-//            let movieDetails = MovieDetails(context: self.context)
-//            movieDetails.id = Int64(movieDetail.id ?? 0)
-//            movieDetails.posterPath = movieDetail.posterPath
-//            movieDetails.releaseDate = movieDetail.releaseDate
-//            movieDetails.title = movieDetail.title
-//            movie.addToDetails(movieDetails)
-//        }
-//        saveContext()
-//    }
-//
-//    func fetchSavedMovies() -> [MovieEntity]? {
-//        let request: NSFetchRequest<Movie> = Movie.fetchRequest()
-//        do {
-//            let savedMovies = try context.fetch(request)
-//            var movieEntities = [MovieEntity]()
-//            
-//            for movie in savedMovies {
-//                var detailsEntities = [MovieDetailsEntity]()
-//                if let details = movie.details?.allObjects as? [MovieDetails] {
-//                    details.forEach { detail in
-//                        detailsEntities.append(MovieDetailsEntity(id: Int(detail.id), posterPath: detail.posterPath, releaseDate: detail.releaseDate, title: detail.title))
-//                    }
-//                }
-//
-//                let movieEntity = MovieEntity(page: Int(movie.page), results: detailsEntities, totalPages: Int(movie.totalPages), totalResults: Int(movie.totalResults))
-//                movieEntities.append(movieEntity)
-//            }
-//            return movieEntities
-//        } catch {
-//            print("Failed to fetch movies: \(error)")
-//            return nil
-//        }
-//    }
-//
-//    func saveContext() {
-//        if context.hasChanges {
-//            do {
-//                try context.save()
-//            } catch {
-//                print("Failed to save context: \(error)")
-//            }
-//        }
-//    }
-//}
-//
+import CoreData
+import UIKit
+
+
+final class MoviesCaching {
+    
+    private var movieEntity: LocalMovieEntity!
+    
+    let persistentContainer: NSPersistentContainer
+    
+    init() {
+        persistentContainer = NSPersistentContainer(name: "CoreDataManager")
+        persistentContainer.loadPersistentStores { _, error in
+            if let error = error {
+                fatalError("Failed to load Core Data : \(error)")
+            }
+        }
+    }
+    
+    var managedObjectContext: NSManagedObjectContext {
+        return persistentContainer.viewContext
+    }
+    
+    func getMovie(type: String, handler: (@escaping(_ result: MovieEntity?, _ error: Error?) -> Void)) {
+        let movies = fetchMoviesFromDataBase.first(where: {$0.type == type})
+        let movie = decodeMoviesData(movies?.movies)
+
+        (movie == nil) ? handler(nil, NetworkError.somethingWentWrong) : handler(movie, nil)
+    }
+    
+    func saveMovies(type: String, with movie: MovieEntity) {
+        movieEntity = LocalMovieEntity(context: managedObjectContext)
+        movieEntity.movies = changeMovieEntityToData(movie)
+        movieEntity.type = type
+        saveInDataBase()
+    }
+    
+}
+
+private extension MoviesCaching {
+    var fetchMoviesFromDataBase: [LocalMovieEntity] {
+        do {
+            return try managedObjectContext.fetch(LocalMovieEntity.fetchRequest())
+        } catch {
+            return []
+        }
+    }
+    
+    func saveInDataBase() {
+        do {
+            try managedObjectContext.save()
+        } catch {
+            debugPrint("Can't save data in the DataBase")
+        }
+    }
+    
+    func decodeMoviesData(_ movie: Data?) -> MovieEntity? {
+        guard let movie else { return nil }
+        do {
+            return try JSONDecoder().decode(MovieEntity.self, from: movie)
+        } catch {
+            return nil
+        }
+    }
+    
+    func changeMovieEntityToData(_ movie: MovieEntity) -> Data? {
+        do {
+            return try movie.jsonData()
+        } catch {
+            return nil
+        }
+    }
+    
+    func deleteAllMovies() {
+        let logs = LocalMovieEntity.fetchRequest() as NSFetchRequest<NSFetchRequestResult>
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: logs)
+        
+        do {
+            try managedObjectContext.execute(deleteRequest)
+        } catch {
+            debugPrint("Failed")
+        }
+    }
+}
+

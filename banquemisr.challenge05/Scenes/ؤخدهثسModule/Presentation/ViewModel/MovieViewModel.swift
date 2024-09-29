@@ -35,6 +35,7 @@ class MovieViewModel: MovieViewModelProtocol{
             }
     
             if let response {
+                useCase.saveMovies(type: type.rawValue, response)
                 movieArray.append(contentsOf: response.results ?? [])
                 pagesCount = response.totalPages
                 handler()

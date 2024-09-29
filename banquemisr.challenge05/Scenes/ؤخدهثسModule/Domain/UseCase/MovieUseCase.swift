@@ -8,7 +8,8 @@
 import Foundation
 
 protocol MovieUseCaseProtocol {
-    func getMovie(pageNumber: Int, path: String, handler: (@escaping(_ result: MovieEntity?, _ error: Error?) -> Void)) 
+    func getMovie(pageNumber: Int, path: String, handler: (@escaping(_ result: MovieEntity?, _ error: Error?) -> Void))
+    func saveMovies(type:String, _ movie: MovieEntity)
 }
 
 class MovieUseCase: MovieUseCaseProtocol {
@@ -20,5 +21,9 @@ class MovieUseCase: MovieUseCaseProtocol {
     
     func getMovie(pageNumber: Int, path: String, handler: (@escaping(_ result: MovieEntity?, _ error: Error?) -> Void)) {
         repo.getMovie(pageNumber: pageNumber, path: path, handler: handler)
+    }
+    
+    func saveMovies(type:String, _ movie: MovieEntity) {
+        repo.saveMovies(type: type, movie)
     }
 }

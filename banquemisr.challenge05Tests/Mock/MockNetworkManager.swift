@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import BankMisrMovieApp
+@testable import banquemisr_challenge05
 
 class MockNetworkManager {
     var shouldReturnError : Bool

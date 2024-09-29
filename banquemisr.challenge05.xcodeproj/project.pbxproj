@@ -27,6 +27,7 @@
 		0533AB0C2CA72242004E00A3 /* MovieDetailsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0533AB0B2CA72242004E00A3 /* MovieDetailsCollectionViewCell.xib */; };
 		0533AB0D2CA72242004E00A3 /* MovieDetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533AB0A2CA72242004E00A3 /* MovieDetailsCollectionViewCell.swift */; };
 		0538271C2CA97A130013EECC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0538271B2CA97A130013EECC /* CoreDataManager.swift */; };
+		053827222CA994E30013EECC /* CoreDataManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 053827202CA994E30013EECC /* CoreDataManager.xcdatamodeld */; };
 		05D70D2B2CA8394F0067F147 /* UiImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D70D2A2CA8394F0067F147 /* UiImageExtension.swift */; };
 		05D70D332CA8B1350067F147 /* MovieDetailsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D70D322CA8B1350067F147 /* MovieDetailsDataSource.swift */; };
 		05D70D362CA8B5D00067F147 /* MovieDetailsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D70D352CA8B5D00067F147 /* MovieDetailsRepo.swift */; };
@@ -46,13 +47,6 @@
 			remoteGlobalIDString = 0533AA852CA630E1004E00A3;
 			remoteInfo = BankMisrMovieApp;
 		};
-		0533AAA72CA630E2004E00A3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0533AA7E2CA630E1004E00A3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0533AA852CA630E1004E00A3;
-			remoteInfo = BankMisrMovieApp;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +57,6 @@
 		0533AA952CA630E2004E00A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0533AA972CA630E2004E00A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0533AA9C2CA630E2004E00A3 /* banquemisr.challenge05Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = banquemisr.challenge05Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0533AAA62CA630E2004E00A3 /* banquemisr.challenge05UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = banquemisr.challenge05UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0533AABD2CA63272004E00A3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0533AAC02CA632AC004E00A3 /* internetConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = internetConnectivity.swift; sourceTree = "<group>"; };
 		0533AAC42CA633A7004E00A3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +73,7 @@
 		0533AB0A2CA72242004E00A3 /* MovieDetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsCollectionViewCell.swift; sourceTree = "<group>"; };
 		0533AB0B2CA72242004E00A3 /* MovieDetailsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsCollectionViewCell.xib; sourceTree = "<group>"; };
 		0538271B2CA97A130013EECC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		053827212CA994E30013EECC /* CoreDataManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataManager.xcdatamodel; sourceTree = "<group>"; };
 		05D70D2A2CA8394F0067F147 /* UiImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiImageExtension.swift; sourceTree = "<group>"; };
 		05D70D322CA8B1350067F147 /* MovieDetailsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieDetailsDataSource.swift; path = ../../../../../../../Documents/MovieDetailsDataSource.swift; sourceTree = "<group>"; };
 		05D70D352CA8B5D00067F147 /* MovieDetailsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsRepo.swift; sourceTree = "<group>"; };
@@ -106,13 +100,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0533AAA32CA630E2004E00A3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -130,7 +117,6 @@
 			children = (
 				0533AA862CA630E1004E00A3 /* banquemisr.challenge05.app */,
 				0533AA9C2CA630E2004E00A3 /* banquemisr.challenge05Tests.xctest */,
-				0533AAA62CA630E2004E00A3 /* banquemisr.challenge05UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -299,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				0538271B2CA97A130013EECC /* CoreDataManager.swift */,
+				053827202CA994E30013EECC /* CoreDataManager.xcdatamodeld */,
 			);
 			path = CoreDataManager;
 			sourceTree = "<group>";
@@ -458,24 +445,6 @@
 			productReference = 0533AA9C2CA630E2004E00A3 /* banquemisr.challenge05Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0533AAA52CA630E2004E00A3 /* banquemisr.challenge05UITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0533AAB62CA630E2004E00A3 /* Build configuration list for PBXNativeTarget "banquemisr.challenge05UITests" */;
-			buildPhases = (
-				0533AAA22CA630E2004E00A3 /* Sources */,
-				0533AAA32CA630E2004E00A3 /* Frameworks */,
-				0533AAA42CA630E2004E00A3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0533AAA82CA630E2004E00A3 /* PBXTargetDependency */,
-			);
-			name = banquemisr.challenge05UITests;
-			productName = BankMisrMovieAppUITests;
-			productReference = 0533AAA62CA630E2004E00A3 /* banquemisr.challenge05UITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -490,10 +459,6 @@
 						CreatedOnToolsVersion = 15.4;
 					};
 					0533AA9B2CA630E2004E00A3 = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 0533AA852CA630E1004E00A3;
-					};
-					0533AAA52CA630E2004E00A3 = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 0533AA852CA630E1004E00A3;
 					};
@@ -514,7 +479,6 @@
 			targets = (
 				0533AA852CA630E1004E00A3 /* banquemisr.challenge05 */,
 				0533AA9B2CA630E2004E00A3 /* banquemisr.challenge05Tests */,
-				0533AAA52CA630E2004E00A3 /* banquemisr.challenge05UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -540,13 +504,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0533AAA42CA630E2004E00A3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -560,6 +517,7 @@
 				05D70D422CA8C9430067F147 /* MovieRepo.swift in Sources */,
 				0533AB0D2CA72242004E00A3 /* MovieDetailsCollectionViewCell.swift in Sources */,
 				0533AB052CA7080E004E00A3 /* DetailsResponse.swift in Sources */,
+				053827222CA994E30013EECC /* CoreDataManager.xcdatamodeld in Sources */,
 				05D70D452CA8CB100067F147 /* MovieUseCase.swift in Sources */,
 				0533AB032CA705E6004E00A3 /* MovieDetailsViewModel.swift in Sources */,
 				0533AAF22CA6E71B004E00A3 /* MoviesResponse.swift in Sources */,
@@ -587,13 +545,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0533AAA22CA630E2004E00A3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -601,11 +552,6 @@
 			isa = PBXTargetDependency;
 			target = 0533AA852CA630E1004E00A3 /* banquemisr.challenge05 */;
 			targetProxy = 0533AA9D2CA630E2004E00A3 /* PBXContainerItemProxy */;
-		};
-		0533AAA82CA630E2004E00A3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0533AA852CA630E1004E00A3 /* banquemisr.challenge05 */;
-			targetProxy = 0533AAA72CA630E2004E00A3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -840,40 +786,6 @@
 			};
 			name = Release;
 		};
-		0533AAB72CA630E2004E00A3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BankMisrMovieAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BankMisrMovieApp;
-			};
-			name = Debug;
-		};
-		0533AAB82CA630E2004E00A3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BankMisrMovieAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BankMisrMovieApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -904,16 +816,21 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0533AAB62CA630E2004E00A3 /* Build configuration list for PBXNativeTarget "banquemisr.challenge05UITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0533AAB72CA630E2004E00A3 /* Debug */,
-				0533AAB82CA630E2004E00A3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		053827202CA994E30013EECC /* CoreDataManager.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				053827212CA994E30013EECC /* CoreDataManager.xcdatamodel */,
+			);
+			currentVersion = 053827212CA994E30013EECC /* CoreDataManager.xcdatamodel */;
+			name = CoreDataManager.xcdatamodeld;
+			path = /Users/mohamedmahgoub/Desktop/banquemisr.challenge05/banquemisr.challenge05/Services/CoreDataManager/CoreDataManager.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0533AA7E2CA630E1004E00A3 /* Project object */;
 }
