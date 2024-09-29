@@ -3,5 +3,6 @@ Movie App
 Screens
 
 
-<img width="313" alt="Screenshot 2024-09-29 at 9 59 36 PM" src="https://github.com/user-attachments/assets/d61290d1-3d06-4978-83dd-5290df1fbb8d">   <img width="313" alt="Screenshot 2024-09-29 at 10 00 05 PM" src="https://github.com/user-attachments/assets/e50d550a-0013-4049-9ece-3fd20d993fa7">
+
+![banquemisr challenge05-Image-1](https://github.com/user-attachments/assets/55ed7705-de7f-4dd1-9d9d-ac671e7b1400)     ![banquemisr challenge05-Image-2](https://github.com/user-attachments/assets/29c31f94-138e-4f1a-ab18-ea75d9ff9ecd)
 
