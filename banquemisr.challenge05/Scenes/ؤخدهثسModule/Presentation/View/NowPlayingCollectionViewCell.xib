@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="137" height="186"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aja-aM-nFs">
-                                <rect key="frame" x="0.0" y="130.33333333333334" width="137" height="55.666666666666657"/>
+                                <rect key="frame" x="0.0" y="133" width="137" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4c-uH-lot">
                                         <rect key="frame" x="8" y="4" width="121" height="18"/>
@@ -45,6 +45,7 @@
                                     <constraint firstItem="yQM-FH-39i" firstAttribute="leading" secondItem="I4c-uH-lot" secondAttribute="leading" constant="4" id="6Yz-3U-Ktj"/>
                                     <constraint firstAttribute="trailing" secondItem="I4c-uH-lot" secondAttribute="trailing" constant="8" id="MlQ-Oj-YpK"/>
                                     <constraint firstItem="yQM-FH-39i" firstAttribute="top" secondItem="I4c-uH-lot" secondAttribute="bottom" constant="8" id="aej-xd-r0D"/>
+                                    <constraint firstAttribute="height" secondItem="I4c-uH-lot" secondAttribute="height" constant="35" id="iZm-Dd-rfN"/>
                                     <constraint firstItem="I4c-uH-lot" firstAttribute="leading" secondItem="aja-aM-nFs" secondAttribute="leading" constant="8" id="oWH-bh-OOi"/>
                                 </constraints>
                             </view>
@@ -54,7 +55,6 @@
                             <constraint firstItem="aFD-c8-1Ft" firstAttribute="top" secondItem="gQS-Ph-wFZ" secondAttribute="top" id="1te-US-u52"/>
                             <constraint firstAttribute="bottom" secondItem="aFD-c8-1Ft" secondAttribute="bottom" id="2sc-hK-Ewe"/>
                             <constraint firstItem="aja-aM-nFs" firstAttribute="leading" secondItem="gQS-Ph-wFZ" secondAttribute="leading" id="4zg-wl-6GQ"/>
-                            <constraint firstItem="aja-aM-nFs" firstAttribute="height" secondItem="gQS-Ph-wFZ" secondAttribute="height" multiplier="0.3" id="5uC-2A-BnU"/>
                             <constraint firstAttribute="trailing" secondItem="aja-aM-nFs" secondAttribute="trailing" id="KBg-UA-IMd"/>
                             <constraint firstAttribute="bottom" secondItem="aja-aM-nFs" secondAttribute="bottom" id="fqV-pB-5xt"/>
                             <constraint firstItem="aFD-c8-1Ft" firstAttribute="leading" secondItem="gQS-Ph-wFZ" secondAttribute="leading" id="iQz-f6-4Sf"/>
